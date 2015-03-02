@@ -15,12 +15,6 @@ Matrix::Matrix(unsigned int r, unsigned int c){
 
 Matrix::~Matrix(){
 
-	/*for( int i = 0 ; i < this->rows ; i++ )
-	{
-		delete[] matrix[i]; 
-	}
-
-	delete[] matrix;*/
 }
 
 void Matrix::Init_Matrix(float ** m, unsigned int r, unsigned int c){
@@ -78,7 +72,7 @@ Matrix Matrix::	Subtract_Matrix(Matrix m  ){
 		return temp;
 	}else{
 		Matrix temp(0,0);
-		//cout << "Error: Row-Column Size Mismatch of matrices! " << endl;
+		cout << "Error: Row-Column Size Mismatch of matrices! " << endl;
 		return temp;
 	}
 	
@@ -105,7 +99,7 @@ Matrix Matrix::	Multiply_Matrix(Matrix m  ){
 	return temp;
 	}else{
 		Matrix temp(0,0);
-		//cout << "Error: Row-Column Size Mismatch of matrices! " << endl;
+		cout << "Error: Row-Column Size Mismatch of matrices! " << endl;
 		return temp;
 	}
 }

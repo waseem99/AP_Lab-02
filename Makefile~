@@ -84,4 +84,5 @@ Matrix_unittest : Matrix.o Matrix_unittest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
 
 Matrix_main:
-	g++ Matrix.cpp main.cpp -o add_main
+	g++ Matrix.cpp main.cpp -o matrix_main
+

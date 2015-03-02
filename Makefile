@@ -85,3 +85,4 @@ Matrix_unittest : Matrix.o Matrix_unittest.o gtest_main.a
 
 Matrix_main:
 	g++ Matrix.cpp main.cpp -o matrix_main
+

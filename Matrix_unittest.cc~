@@ -40,7 +40,7 @@ TEST(MtrixTest2, Multiply) {
 	EXPECT_EQ( t.matrix[1][1], 5);
 }
 
-TEST(MtrixTest3, Multiply&Add) {
+TEST(MtrixTest3, Multiply_Add) {
   	Matrix a(2,2);
 	Matrix b(2,2);
 	for (int i=0; i<2; i++)

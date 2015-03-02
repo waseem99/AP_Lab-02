@@ -15,7 +15,7 @@ public:
 	Matrix Add_Matrix(Matrix m );
 	Matrix Subtract_Matrix(Matrix m );
 	Matrix Multiply_Matrix(Matrix m );
-	void Display_Matrix(Matrix m);
+	void Display_Matrix();
 	
 	float ** matrix;
 	unsigned int rows;

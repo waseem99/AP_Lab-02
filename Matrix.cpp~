@@ -89,7 +89,7 @@ Matrix Matrix::	Multiply_Matrix(Matrix m  ){
 	Matrix temp(this->rows, m.cols);
 	for (int i=0; i<this->rows; i++)
 		for (int j=0; j<m.cols; j++){
-			a.matrix[i][j]=0;
+			temp.matrix[i][j]=0;
 		}
 	for (int i = 0; i <this->rows ;i++ )
 		{

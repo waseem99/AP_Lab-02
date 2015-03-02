@@ -1,0 +1,44 @@
+Muhammad Waseem Khan
+Reg#	01043
+BESE-3A
+
+Matrices Program 
+
+How to Run: 
+1)	Install git.
+2)	Clone git repo using this command:
+		git clone https://github.com/waseem99/AP_Lab-02.git
+3)	Now run: cd AP_Lab-02
+4)	Now run: make
+5)	Now run: ./Matrix_unittest 
+6)	Desired Output can be seen
+
+Sample Outputs:
+
+
+root@ubuntu:/var/www/git/AP_Lab-02# ./Matrix_unittest
+Running main() from gtest_main.cc
+[==========] Running 3 tests from 3 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from MtrixTest1
+[ RUN      ] MtrixTest1.Add
+Initialized add
+[       OK ] MtrixTest1.Add (0 ms)
+[----------] 1 test from MtrixTest1 (0 ms total)
+
+[----------] 1 test from MtrixTest2
+[ RUN      ] MtrixTest2.Multiply
+[       OK ] MtrixTest2.Multiply (0 ms)
+[----------] 1 test from MtrixTest2 (0 ms total)
+
+[----------] 1 test from MtrixTest3
+[ RUN      ] MtrixTest3.Multiply_Add
+Initialized add
+[       OK ] MtrixTest3.Multiply_Add (0 ms)
+[----------] 1 test from MtrixTest3 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 3 test cases ran. (0 ms total)
+[  PASSED  ] 3 tests.
+root@ubuntu:/var/www/git/AP_Lab-02# 
+
