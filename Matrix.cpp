@@ -9,7 +9,7 @@ Matrix::Matrix(unsigned int r, unsigned int c){
 	this->rows=r;
 	this->cols=c;	
 	matrix = new float * [r];
-	for(int i = 0; i < r; i++)
+	for(unsigned int i = 0; i < r; i++)
 		matrix[i] = new float[c];
 }
 
@@ -20,9 +20,9 @@ Matrix::~Matrix(){
 void Matrix::Init_Matrix(float ** m, unsigned int r, unsigned int c){
 
 	if(r==this->rows && c== this->cols){
-		for (int i=0; i<r; i++){
-			for (int j=0; j<c; j++){
-				this->matrix[i][j] = 0;//m[i][j];
+		for (unsigned int i=0; i<r; i++){
+			for (unsigned int j=0; j<c; j++){
+				this->matrix[i][j] = m[i][j];
 			}
 		}
 	}else{
@@ -43,9 +43,9 @@ Matrix Matrix::	Add_Matrix( Matrix m ){
 	if(m.rows==this->rows && m.cols==this->cols){
 		Matrix temp(m.rows, m.cols);
 					cout<<"Initialized add"<<endl;
-		for (int i = 0; i < m.rows;i++ )
+		for (unsigned int i = 0; i < m.rows;i++ )
 			{
-				for (int j = 0; j < m.cols; j++)
+				for (unsigned int j = 0; j < m.cols; j++)
 				{
 					temp.matrix[i][j] = m.matrix[i][j] + this->matrix[i][j];
 				}
@@ -62,9 +62,9 @@ Matrix Matrix::	Subtract_Matrix(Matrix m  ){
 
 	if(m.rows==this->rows && m.cols==this->cols){
 		Matrix temp(m.rows, m.cols);
-		for (int i = 0; i < rows;i++ )
+		for (unsigned int i = 0; i < rows;i++ )
 			{
-				for (int j = 0; j < cols; j++)
+				for (unsigned int j = 0; j < cols; j++)
 				{
 					temp.matrix[i][j] = m.matrix[i][j] - this->matrix[i][j];
 				}
@@ -81,15 +81,15 @@ Matrix Matrix::	Subtract_Matrix(Matrix m  ){
 Matrix Matrix::	Multiply_Matrix(Matrix m  ){
 	if(m.rows==this->cols){
 	Matrix temp(this->rows, m.cols);
-	for (int i=0; i<this->rows; i++)
-		for (int j=0; j<m.cols; j++){
+	for (unsigned int i=0; i<this->rows; i++)
+		for (unsigned int j=0; j<m.cols; j++){
 			temp.matrix[i][j]=0;
 		}
-	for (int i = 0; i <this->rows ;i++ )
+	for (unsigned int i = 0; i <this->rows ;i++ )
 		{
-			for (int j = 0; j<m.cols ; j++)
+			for (unsigned int j = 0; j<m.cols ; j++)
 			{
-				for (int k = 0; k<this->cols; k++)
+				for (unsigned int k = 0; k<this->cols; k++)
 				{
 					temp.matrix[i][j] += this->matrix[i][k] * m.matrix[k][j];
 					
@@ -105,9 +105,9 @@ Matrix Matrix::	Multiply_Matrix(Matrix m  ){
 }
 
 void Matrix::	Display_Matrix(){
-	for (int i = 0; i < this->rows;i++ )
+	for (unsigned int i = 0; i < this->rows;i++ )
 		{
-			for (int j = 0; j < this->cols; j++)
+			for (unsigned int j = 0; j < this->cols; j++)
 			{
 				cout << this->matrix[i][j] <<"\t"<< endl;
 			}
